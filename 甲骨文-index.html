@@ -6,122 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="../../js/jquery-1.11.0.js"></script>
+    <script src="./js/com.js"></script>
+    <link rel="stylesheet" href="./css/com.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        li {
-            list-style: none;
-        }
-
-        body {
-            background-color: #b9b7b7;
-        }
-
-        .bgc {
-
-            width: 1143px;
-            /* height: 800px; */
-            background-color: #fff;
-            font-family: Arial, Helvetica, sans-serif;
-            box-shadow: 1px 2px 3px #5f5f5f;
-            margin: 0 auto;
-        }
-
-        .bgc .banner {
-            position: relative;
-            /* overflow: hidden; */
-            width: 100%;
-
-        }
-
-        .bgc .banner a {
-            position: absolute;
-            text-decoration: none;
-            left: 50px;
-            top: 50px;
-
-
-        }
-
-        .banner .nav {
-            position: absolute;
-            left: 0;
-            top: 120px;
-            height: 70px;
-            line-height: 70px;
-            width: 100%;
-            font-size: 18px;
-            background-color: #fff;
-        }
-
-        .banner .nav ul {
-            height: 100%;
-            padding-left: 10px;
-        }
-
-        .banner .nav h2 {
-
-            float: left;
-            font-size: 18px;
-            font-weight: 500;
-            margin-right: 40px;
-            text-align: center;
-            padding-left: 20px;
-        }
-
-        .banner .nav ul li {
-            float: left;
-            margin-left: 5px;
-            padding: 0 24px;
-            text-align: center;
-            border-bottom: 3px solid blue;
-        }
-
-        .banner .nav ul li .wenzi p {
-            border-bottom: 1px solid #fff;
-            display: none;
-        }
-
-        .banner .nav ul li:hover {
-            background-color: orange;
-        }
-
-        .banner .nav ul li:hover .wenzi p {
-            display: block;
-            font-size: 14px;
-
-        }
-
-        .banner em {
-            position: absolute;
-            top: 50%;
-            font-style: normal;
-            font-size: 100px;
-            color: #fff;
-            cursor: pointer;
-
-        }
-
-        .banner em:hover {
-            color: gray;
-        }
-
-        .banner em:last-of-type {
-            left: 95%
-        }
-
-        .banner .pic li {
-            display: none;
-        }
-
-        .banner .pic li:first-of-type {
-            display: block;
-        }
-
         .inner {
             position: relative;
         }
@@ -339,52 +226,34 @@
 
 </html>
 <script>
-
-    var index = 0;
-    var timer
-    $(".banner em:eq(0)").on("click", function () {
-        index--
-        if (index == -1) {
-            index = 3
+    $(".inner ul li").on({
+        mouseenter: function (event) {
+            var left = this.offsetLeft
+            var top = this.offsetTop
+            // console.log($(this).find(".jieshao").html())
+            $(".inner .bghidden").html($(this).find(".jieshao").html())
+            $(".inner .bghidden").fadeIn().animate({ "left": left + "px", "top": top + "px" })
+        },
+        click: function () {
+            window.location.href = "./甲骨文detail.html"
         }
-        $(".pic li").eq(index).stop().show().siblings("li").stop().hide()
     })
-    $(".banner em:eq(1)").on("click", function () {
-        index++
-        if (index == 4) {
-            index = 0
-        }
-        $(".pic li").eq(index).stop().show().siblings("li").stop().hide()
+    $(".inner .bghidden").on("click", function () {
+        $(".inner ul li").click()
     })
-    timer = setInterval(function () {
-        $(".banner em:eq(1)").click()
-    }, 3000)
-    $(".inner ul li").on("mouseenter", function (event) {
-        var left = this.offsetLeft
-        var top = this.offsetTop
-        // console.log($(this).find(".jieshao").html())
-        $(".inner .bghidden").html($(this).find(".jieshao").html())
-        $(".inner .bghidden").fadeIn().animate({ "left": left + "px", "top": top + "px" })
-
-    })
-
-
-
-
-
 </script>
 <!-- //懒加载插件 -->
 <script src="./EasyLazyload/dist/EasyLazyload.min.js"></script>
 <script>
     window.addEventListener("load", function () {
         lazyLoadInit({
-            showTime: 2000,
-            onLoadBackEnd: function (i, e) {
-                console.log("onLoadBackEnd:" + i);
-            }
-            , onLoadBackStart: function (i, e) {
-                console.log("onLoadBackStart:" + i);
-            }
+            showTime: 1000,
+            // onLoadBackEnd: function (i, e) {
+            //     console.log("onLoadBackEnd:" + i);
+            // }
+            // , onLoadBackStart: function (i, e) {
+            //     console.log("onLoadBackStart:" + i);
+            // }
         });
     })
 </script>
