@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../js/jquery-1.11.0.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        body {
+            background-color: #b9b7b7;
+        }
+
+        .bgc {
+
+            width: 1143px;
+            /* height: 800px; */
+            background-color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            box-shadow: 1px 2px 3px #5f5f5f;
+            margin: 0 auto;
+        }
+
+        .bgc .banner {
+            position: relative;
+            /* overflow: hidden; */
+            width: 100%;
+
+        }
+
+        .bgc .banner a {
+            position: absolute;
+            text-decoration: none;
+            left: 50px;
+            top: 50px;
+
+
+        }
+
+        .banner .nav {
+            position: absolute;
+            left: 0;
+            top: 120px;
+            height: 70px;
+            line-height: 70px;
+            width: 100%;
+            font-size: 18px;
+            background-color: #fff;
+        }
+
+        .banner .nav ul {
+            height: 100%;
+            padding-left: 10px;
+        }
+
+        .banner .nav h2 {
+
+            float: left;
+            font-size: 18px;
+            font-weight: 500;
+            margin-right: 40px;
+            text-align: center;
+            padding-left: 20px;
+        }
+
+        .banner .nav ul li {
+            float: left;
+            margin-left: 5px;
+            padding: 0 24px;
+            text-align: center;
+            border-bottom: 3px solid blue;
+        }
+
+        .banner .nav ul li .wenzi p {
+            border-bottom: 1px solid #fff;
+            display: none;
+        }
+
+        .banner .nav ul li:hover {
+            background-color: orange;
+        }
+
+        .banner .nav ul li:hover .wenzi p {
+            display: block;
+            font-size: 14px;
+
+        }
+
+        .banner em {
+            position: absolute;
+            top: 50%;
+            font-style: normal;
+            font-size: 100px;
+            color: #fff;
+            cursor: pointer;
+
+        }
+
+        .banner em:hover {
+            color: gray;
+        }
+
+        .banner em:last-of-type {
+            left: 95%
+        }
+
+        .banner .pic li {
+            display: none;
+        }
+
+        .banner .pic li:first-of-type {
+            display: block;
+        }
+
+        .inner {
+            position: relative;
+        }
+
+        .inner ul {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .inner ul li {
+            position: relative;
+            float: left;
+            width: 368px;
+            height: 368px;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+
+        /* .inner ul li:hover .jieshao {
+            display: block;
+            cursor: pointer;
+        } */
+
+        /* .inner ul li:hover .bghidden {
+            display: block;
+            cursor: pointer;
+        } */
+
+        .inner .bghidden {
+            display: none;
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            height: 368px;
+            width: 368px;
+            font-size: 16px;
+            color: #fff;
+            background-color: rgba(2, 2, 2, .3);
+        }
+
+        /* .inner .bghidden .jieshao {
+            display: none;
+            position: absolute;
+            z-index: 2;
+            width: 100%;
+            left: 0;
+            top: 5px;
+
+        } */
+
+        .inner .bghidden h1 {
+            font: normal 500 25px "宋体";
+            height: 80px;
+            width: 300px;
+            text-align: center;
+            line-height: 80px;
+            margin: 40px auto 0;
+
+            border-bottom: #fff solid 2px;
+        }
+
+        .inner .bghidden p {
+            width: 300px;
+            font-size: 16px;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .foot p {
+            width: 800px;
+            font-size: 14px;
+            color: black;
+            margin: 20px 50px;
+        }
+
+        .foot p a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bgc">
+        <div class="banner">
+            <a href="javascript:;">
+                <img data-lazy-src="../../upimages/logo.png">
+            </a>
+            <div class="nav">
+                <h2>首页</h2>
+                <ul>
+                    <li>韩素音翻译奖</li>
+                    <li>新闻中心</li>
+                    <li>业务版图
+                        <div class="wenzi">
+                            <p>业务版图</p>
+                            <p>业务版图</p>
+                            <p>业务版图</p>
+                            <p>业务版图</p>
+                            <p style="border: 0;">业务版图</p>
+                        </div>
+
+                    </li>
+                    <li>行业方案
+                        <div class="wenzi">
+                            <p>业务版图</p>
+                            <p>业务版图</p>
+                            <p>业务版图</p>
+                            <p>业务版图</p>
+                            <p style="border: 0;">业务版图</p>
+                        </div>
+                    </li>
+                    <li>加入我们</li>
+                    <li>客户案例</li>
+                    <li>公司内刊</li>
+                    <li>联系我们</li>
+                </ul>
+            </div>
+            <div class="pic">
+                <ul>
+                    <li>
+                        <img data-lazy-src="../../upimages/07.jpg" width="1143" height="650px">
+                    </li>
+                    <li>
+                        <img src="../../upimages/08.jpg" width="1143" height="650px">
+                    </li>
+                    <li>
+                        <img src="../../upimages/09.jpg" width="1143" height="650px">
+                    </li>
+                    <li>
+                        <img src="../../upimages/10.jpg" width="1143" height="650px">
+                    </li>
+                </ul>
+            </div>
+            <em>&lt</em>
+            <em>&gt</em>
+        </div>
+        <div class="inner">
+            <ul>
+                <li>
+                    <img data-lazy-src="../../upimages/01.jpg">
+                    <div class="jieshao">
+                        <h1>
+                            关于我们
+                        </h1>
+                        <p> 甲骨易(股票代码:
+                            870633)前身成立于1996年，是最早被国际认可的成功“走出去”的中国权威语言服务机构之一，是美国翻译协会ATA荣誉会员、中国对外承包工程商会会员，并获得ISO9001质量体系认证
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <img data-lazy-src="../../upimages/02.jpg">
+                    <div class="jieshao">
+                        <h1>
+                            行业方案
+                        </h1>
+                        <p>
+
+                            电力能源<br>
+                            金融法律<br>
+                            影视译制<br>
+                            图书出版
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <img data-lazy-src="../../upimages/03.jpg">
+                    <div class="jieshao">
+                        <h1>
+                            关于我们
+                        </h1>
+                        <p> 甲骨易(股票代码:
+                            870633)前身成立于1996年，是最早被国际认可的成功“走出去”的中国权威语言服务机构之一，是美国翻译协会ATA荣誉会员、中国对外承包工程商会会员，并获得ISO9001质量体系认证
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <img data-lazy-src="../../upimages/04.jpg">
+                    <div class="jieshao">
+                        <h1>
+                            关于我们
+                        </h1>
+                        <p> 甲骨易(股票代码:
+                            870633)前身成立于1996年，是最早被国际认可的成功“走出去”的中国权威语言服务机构之一，是美国翻译协会ATA荣誉会员、中国对外承包工程商会会员，并获得ISO9001质量体系认证
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <img data-lazy-src="../../upimages/05.jpg">
+                    <div class="jieshao">
+                        <h1>
+                            翻译团队
+                        </h1>
+                        <p>
+                            甲骨易翻译”拥有实力强大的翻译师团队，可以提供高水平的英、西、葡、日、德、法、俄、阿、韩等语种资料翻译
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <img data-lazy-src="../../upimages/06.jpg">
+                </li>
+            </ul>
+            <div class="bghidden"></div>
+        </div>
+        <div class="foot">
+            <p>
+                ©2007 ChinaBestEasy.com.版权所有 京ICP备17005664号 京公网安:110102001009 <a href="javascript:;">360网站安全检测平台</a>
+                欢迎致电：86-10-6332-0310 /
+                6332-0786
+            </p>
+        </div>
+    </div>
+
+</body>
+
+
+</html>
+<script>
+
+    var index = 0;
+    var timer
+    $(".banner em:eq(0)").on("click", function () {
+        index--
+        if (index == -1) {
+            index = 3
+        }
+        $(".pic li").eq(index).stop().show().siblings("li").stop().hide()
+    })
+    $(".banner em:eq(1)").on("click", function () {
+        index++
+        if (index == 4) {
+            index = 0
+        }
+        $(".pic li").eq(index).stop().show().siblings("li").stop().hide()
+    })
+    timer = setInterval(function () {
+        $(".banner em:eq(1)").click()
+    }, 3000)
+    $(".inner ul li").on("mouseenter", function (event) {
+        var left = this.offsetLeft
+        var top = this.offsetTop
+        // console.log($(this).find(".jieshao").html())
+        $(".inner .bghidden").html($(this).find(".jieshao").html())
+        $(".inner .bghidden").fadeIn().animate({ "left": left + "px", "top": top + "px" })
+
+    })
+
+
+
+
+
+</script>
+<!-- //懒加载插件 -->
+<script src="./EasyLazyload/dist/EasyLazyload.min.js"></script>
+<script>
+    window.addEventListener("load", function () {
+        lazyLoadInit({
+            showTime: 2000,
+            onLoadBackEnd: function (i, e) {
+                console.log("onLoadBackEnd:" + i);
+            }
+            , onLoadBackStart: function (i, e) {
+                console.log("onLoadBackStart:" + i);
+            }
+        });
+    })
+</script>
