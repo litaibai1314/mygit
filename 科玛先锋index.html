@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>科玛先锋</title>
+    <link rel="stylesheet" href="./css/kcom.css">
+    <script src="../../js/jquery-1.11.0.js"></script>
+    <script src="../../js/vue.js"></script>
+    <style>
+        .fangkuan strong {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 26px;
+            height: 25px;
+            background: url(../../upimages/base.png) no-repeat -70px -28px;
+
+        }
+
+        .focus .yanse {
+            background-color: red;
+        }
+
+        .focus {
+            overflow: hidden;
+            position: relative;
+            width: 1300px;
+            height: 500px;
+            margin: 100px auto;
+        }
+
+        .focus em {
+            position: absolute;
+            width: 30px;
+            height: 50px;
+            line-height: 50px;
+            background-color: rgba(255, 255, 255, .7);
+            font-size: 20px;
+            font-style: normal;
+        }
+
+        .focus em:nth-of-type(1) {
+            left: 0;
+            top: calc(50% - 25px)
+        }
+
+        .focus em:nth-of-type(2) {
+            left: calc(100% - 30px);
+            top: calc(50% - 25px)
+        }
+
+        .focus ol {
+            position: absolute;
+            left: 50%;
+            top: 90%;
+            overflow: hidden;
+        }
+
+        .focus ol li {
+            float: left;
+            height: 20px;
+            width: 20px;
+            background-color: skyblue;
+            margin-right: 5px;
+            border-radius: 10px;
+        }
+
+        .focus ul {
+            overflow: hidden;
+            position: absolute;
+            width: 400%;
+            height: 100%;
+        }
+
+        .focus ul li {
+            float: left;
+            position: relative;
+            width: 25%;
+            height: 100%;
+
+        }
+
+        .focus ul li img {
+
+            width: 1300px;
+            height: 500px;
+
+        }
+
+        .focus .wenzi {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="w">
+        <div class="nav">
+            <div class="logo fl">
+                <a href="科玛先锋index.html">
+                    <img src="https://www.co-mall.com/images/temp/logo.png" alt="...">
+                </a>
+
+            </div>
+            <ul class="fl">
+                <li><a href="#" target="_blank" rel="noopener noreferrer">首页</a></li>
+                <li>产品
+                    <div class="hoverContent">
+                        <div class="fangkuan">
+                            <div class="up">
+                                <strong></strong>
+                                <h3>p2p</h3>
+                                <em>></em>
+                            </div>
+                            <p>CyberShopB2C商城系统，接口全，扩展灵活；</p>
+                        </div>
+                        <div class="fangkuan">
+                            <div class="up">
+                                <strong></strong>
+                                <h3>p2p</h3>
+                                <em>></em>
+                            </div>
+                            <p>CyberShopB2C商城系统，接口全，扩展灵活；</p>
+                        </div>
+                        <div class="fangkuan">
+                            <div class="up">
+                                <strong></strong>
+                                <h3>p2p</h3>
+                                <em>></em>
+                            </div>
+                            <p>CyberShopB2C商城系统，接口全，扩展灵活；</p>
+                        </div>
+                    </div>
+                </li>
+                <li>服务
+                    <div class="hoverContent">
+                        <div class="fangkuan">
+                            <div class="up">
+                                <strong></strong>
+                                <h3>p2p</h3>
+                                <em>></em>
+                            </div>
+                            <p>CyberShopB2C商城系统，接口全，扩展灵活111；</p>
+                        </div>
+                        <div class="fangkuan">
+                            <div class="up">
+                                <strong></strong>
+                                <h3>p2p</h3>
+                                <em>></em>
+                            </div>
+                            <p>CyberShopB2C商城系统，接口全，扩展灵活；</p>
+                        </div>
+                        <div class="fangkuan">
+                            <div class="up">
+                                <strong></strong>
+                                <h3>p2p</h3>
+                                <em>></em>
+                            </div>
+                            <p>CyberShopB2C商城系统，接口全，扩展灵活；</p>
+                        </div>
+                    </div>
+                </li>
+                <li>合作伙伴
+                    <div class="hoverContent">
+                        <div class="fangkuan">
+                            <div class="up">
+                                <h3>p2p</h3>
+                                <em>></em>
+                            </div>
+                            <p>CyberShopB2C商城系统，接口全，扩展灵活；</p>
+                        </div>
+                        <div class="fangkuan">
+                            <div class="up">
+                                <h3>p2p</h3>
+                                <em>></em>
+                            </div>
+                            <p>CyberShopB2C商城系统，接口全，扩展灵活；</p>
+                        </div>
+                        <div class="fangkuan">
+                            <div class="up">
+                                <h3>p2p</h3>
+                                <em>></em>
+                            </div>
+                            <p>CyberShopB2C商城系统，接口全，扩展灵活；</p>
+                        </div>
+                    </div>
+                </li>
+                <li>成功故事</li>
+                <li>咨询</li>
+                <li>关于科玛</li>
+            </ul>
+            <div class="phone fr">010-13343424555
+                <span></span>
+            </div>
+        </div>
+
+        <div id="app">
+            <div class="focus">
+                <ul @click="handel3">
+                    <li v-for="(value,i) in list" :key="i">
+                        <img :src="value.path" alt="...">
+                        <div class="wenzi">
+                            <h3>{{value.h}}</h3>
+                            <p>{{value.p}}</p>
+                        </div>
+                    </li>
+                </ul>
+                <ol>
+                    <li v-for="(value,i) in list2" @click="handel(i)"> </li>
+                </ol>
+                <em @click="handel1">&lt</em>
+                <em @click="handel2">></em>
+
+
+            </div>
+        </div>
+        <script>
+            var vm = new Vue({
+                el: "#app",
+                data: {
+                    id: 0,
+                    list: [{ "path": "../../upimages/banner_2.jpg", "h": "我是标题", "p": "我是文字哎" }, { "path": "../../upimages/banner_3.jpg" }, { "path": "../../upimages/banner_4.jpg" }, { "path": "../../upimages/banner_2.jpg", "h": "我是标题", "p": "我是文字哎" }],
+                    list2: [1, 1, 1],
+
+                },
+
+                methods: {
+                    handel(i) {
+                        vm.id = i
+                        var ul = document.querySelector(".focus ul")
+                        var w = ul.children[1].offsetWidth
+                        ul.style.left = -i * w + "px"
+                        $(".focus ol").find("li").eq(i).addClass("yanse").siblings().removeClass("yanse")
+                    },
+                    handel1() {
+                        var ul = document.querySelector(".focus ul")
+                        var w = ul.children[1].offsetWidth
+                        if (this.id == 0) {
+                            this.id = 3
+                            ul.style.left = -this.id * w + "px"
+                        }
+                        this.id--;
+                        $(ul).stop().animate({ "left": -this.id * w + "px" }, 1000)
+                        $("ol ")
+                        $(".focus ol").find("li").eq(this.id).addClass("yanse").siblings().removeClass("yanse")
+                    },
+                    handel2() {
+                        var ul = document.querySelector(".focus ul")
+                        var w = ul.children[1].offsetWidth
+                        if (this.id == 3) {
+                            // $(ul).stop().animate({ "left": -this.id * w + "px" }, 1000)
+                            this.id = 0
+                            ul.style.left = -this.id * w + "px"
+                        }
+                        this.id++;
+                        $(ul).stop().animate({ "left": -this.id * w + "px" }, 1000)
+                        $(".focus ol").find("li").eq(this.id).addClass("yanse").siblings().removeClass("yanse")
+                    },
+                    handel3() {
+                        // clearInterval(timer)
+                        var timer = setInterval(function () {
+                            vm.handel2()
+                        }, 2000);
+                        $(".focus ol").find("li").eq(this.id).addClass("yanse").siblings().removeClass("yanse")
+
+                    },
+                },
+
+            })
+        </script>
+
+
+
+    </div>
+</body>
+
+</html>
