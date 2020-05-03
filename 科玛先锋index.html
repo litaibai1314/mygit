@@ -28,7 +28,7 @@
             position: relative;
             width: 1300px;
             height: 500px;
-            margin: 100px auto;
+            margin: 70px auto;
         }
 
         .focus em {
@@ -93,6 +93,200 @@
             position: absolute;
             left: 50%;
             top: 50%;
+        }
+
+        #server {
+            /* overflow: hidden; */
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        #server .server-item {
+            position: relative;
+            float: left;
+            width: 33%;
+        }
+
+        .server-item h1 {
+            font: 400 25px/30px "微软雅黑";
+            text-align: center;
+            margin-bottom: 30px;
+
+        }
+
+        .server-item p {
+            font-size: 15px;
+            text-indent: 2em;
+            line-height: 30px;
+        }
+
+        .server-item span {
+            position: absolute;
+            top: 0;
+            left: 100px;
+            height: 50px;
+            width: 50px;
+        }
+
+        .server-item span[index="0"] {
+            background-color: pink;
+            background: url(../../upimages/base.png) no-repeat -20px -25px;
+        }
+
+        .server-item span[index="1"] {
+            background-color: pink;
+            background: url(../../upimages/base.png) no-repeat -100px -25px;
+        }
+
+        .server-item span[index="2"] {
+            background-color: pink;
+            background: url(../../upimages/base.png) no-repeat -305px 0px;
+        }
+
+        video {
+            margin-top: 100px;
+            margin-left: 50px;
+        }
+
+        .user {
+            width: 100%;
+        }
+
+        .user-head {
+            position: relative;
+            width: 1200px;
+            height: 90px;
+            border-bottom: 2px double #aaa;
+            margin: auto;
+        }
+
+        .user-head h1 {
+            font-weight: 500;
+            font-size: 35px;
+            /* text-align: center; */
+            margin: 30px;
+            margin-left: 150px;
+        }
+
+        .user-head em {
+            position: absolute;
+            left: 50px;
+            width: 85px;
+            height: 58px;
+            background-color: pink;
+            background: url(../../upimages/index.png) no-repeat 0px -95px;
+        }
+
+        .user ul {
+            width: 1200px;
+            margin: 50px auto;
+            margin-bottom: 0;
+            background-color: rgb(245, 245, 245);
+
+        }
+
+        .user ul li {
+            float: left;
+            width: 280px;
+            height: 100px;
+            padding: 10px;
+            /* background-color: #aaa; */
+
+
+        }
+
+        .user ul li img {
+            width: 100%;
+            height: 100%;
+            padding: 1px;
+        }
+
+        .wrapper {
+            width: 1200px;
+            margin: 20px auto;
+        }
+
+        .wrapper .shuju {
+            position: relative;
+            width: 33%;
+            border-right: 1px solid #aaa;
+            text-align: center;
+            font-size: 35px;
+            color: #888;
+
+        }
+
+        .wrapper .shuju span {
+            position: absolute;
+            left: 40%;
+            top: 0;
+            height: 36px;
+            width: 39px;
+            background: url(../../upimages/font.png) no-repeat;
+        }
+
+        .wrapper .shuju h3 {
+            position: relative;
+            margin: 50px 0 20px 0;
+            font-weight: 400;
+            font-size: 30px;
+        }
+
+        footer {
+            position: relative;
+            width: 100%;
+            background-color: blue;
+            padding: 50px;
+        }
+
+        footer dl {
+            position: relative;
+            padding: 0 60px;
+            color: #f2f7fc;
+        }
+
+        footer dl::before {
+            content: "";
+            position: absolute;
+            left: 15px;
+            top: 0;
+            height: 44px;
+            width: 44px;
+        }
+
+        footer .dl1::before {
+            background: url(../../upimages/base.png) no-repeat -194px -63px;
+            /* background-color: greenyellow; */
+        }
+
+        footer .dl2::before {
+            background: url(../../upimages/base.png) no-repeat -281px -61px;
+            /* background-color: greenyellow; */
+        }
+
+        footer .down {
+            text-align: right;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #f2f7fc;
+            font-size: 14px;
+        }
+
+        footer .down strong {
+            color: #fff;
+            font-size: 15px;
+        }
+
+        footer .down em {
+            display: none;
+            position: absolute;
+            left: 95%;
+            top: 10px;
+            width: 55px;
+            height: 55px;
+            /* background-color: pink; */
+
+
         }
     </style>
 </head>
@@ -218,6 +412,85 @@
 
             </div>
         </div>
+        <div id="server" class="clear">
+            <div class="server-item" v-for="(val,i) in serlist">
+                <h1>{{val.h}}</h1>
+                <p>{{val.p}}</p>
+                <span :index=i></span>
+            </div>
+
+
+        </div>
+        <video src="https://www.co-mall.com/images/video/km.mp4" width="1180px" height="600px" controls="controls">
+        </video>
+        <div class="user">
+            <div class="user-head">
+                <em></em>
+                <h1>我们的客户</h1>
+            </div>
+            <ul class="clear">
+                <li>
+                    <img src="https://www.co-mall.com/images/temp/case_09.jpg" alt="...">
+                </li>
+                <li>
+                    <img src="https://www.co-mall.com/images/temp/case_04.jpg" alt="...">
+                </li>
+                <li>
+                    <img src="https://www.co-mall.com/images/temp/case05.jpg" alt="...">
+                </li>
+                <li>
+                    <img src="https://www.co-mall.com/images/temp/case_06.jpg" alt="...">
+                </li>
+                <li>
+                    <img src="https://www.co-mall.com/images/temp/case_07.jpg" alt="...">
+                </li>>
+                <li>
+                    <img src="https://www.co-mall.com/images/temp/case_08.jpg" alt="...">
+                </li>
+                <li>
+                    <img src="https://www.co-mall.com/images/temp/case_02.jpg" alt="...">
+                </li>
+                <li>
+                    <img src="https://www.co-mall.com/images/temp/case_06.jpg" alt="...">
+                </li>
+            </ul>
+        </div>
+        <div class="wrapper clear">
+            <div class="shuju fl">
+                <span></span>
+                <h3>日均pvp</h3>
+                <p>1000000000+</p>
+            </div>
+            <div class="shuju fl">
+                <span style="background: url(../../upimages/font.png) no-repeat -56px;"></span>
+                <h3>日均pvp</h3>
+                <p>1000000000+</p>
+            </div>
+            <div class="shuju fl" style="border:0">
+                <span style="background: url(../../upimages/font.png) no-repeat -100px;"></span>
+                <h3>日均pvp</h3>
+                <p>1000000000+</p>
+            </div>
+        </div>
+        <footer>
+            <div class="up clear">
+                <dl class="fl dl1">
+                    <dt>联系我们</dt>
+                    <dd>总机：0108387782838</dd>
+                    <dd>商务合作电话：29398389392</dd>
+                </dl>
+                <dl class="fl dl2">
+                    <dt>联系我们的另一种方式</dt>
+                    <dd>北京总部：。。。。</dd>
+                    <dd>武汉分公司：武汉光谷区世界广场</dd>
+                </dl>
+            </div>
+            <div class="down">
+                <h5>版权所有：<strong>京icp13034354</strong></h5>
+                <em><img src="https://www.co-mall.com/images/temp/top.png" alt=""></em>
+
+            </div>
+        </footer>
         <script>
             var vm = new Vue({
                 el: "#app",
@@ -254,11 +527,12 @@
                         if (this.id == 3) {
                             // $(ul).stop().animate({ "left": -this.id * w + "px" }, 1000)
                             this.id = 0
-                            ul.style.left = -this.id * w + "px"
+                            ul.style.left = 0 + "px"
                         }
+                        $(".focus ol").find("li").eq(this.id + 1).addClass("yanse").siblings().removeClass("yanse")
                         this.id++;
                         $(ul).stop().animate({ "left": -this.id * w + "px" }, 1000)
-                        $(".focus ol").find("li").eq(this.id).addClass("yanse").siblings().removeClass("yanse")
+
                     },
                     handel3() {
                         // clearInterval(timer)
@@ -270,10 +544,30 @@
                     },
                 },
 
+            });
+            var vm2 = new Vue({
+                el: "#server",
+                data: {
+                    serlist: [{ "h": "产品", "p": "人们便一个一个陆续走回去；一同回去，也不行的。他有一条戒尺，但是不常用" }, { "h": "服务", "p": "人们便一个一个陆续走回去；一同回去，也不行的。他有一条戒尺，但是不常用" }, { "h": "售后", "p": "人们便一个一个陆续走回去；一同回去，也不行的。他有一条戒尺，但是不常用" }]
+                },
+                methods: {
+
+                }
             })
         </script>
 
-
+        <script>
+            $(document).on("scroll", function (e) {
+                // alert(222)
+                // console.log($(this).scrollTop())
+                var scroll = $(this).scrollTop()
+                var h = $(this).height()
+                if (scroll > h * 0.7) {
+                    // alert(1)
+                    $(".down em").show()
+                }
+            })
+        </script>
 
     </div>
 </body>

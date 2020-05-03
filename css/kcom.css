@@ -4,6 +4,11 @@
     box-sizing: border-box;
     user-select: none;
 }
+.clear:after{
+    content:"";
+    display: block;
+    clear: both;
+}
 
 li {
     list-style: none;
@@ -20,12 +25,12 @@ a{
 }
 
 body {
-    background-color: #fff;
+      background-color: rgb(245, 245, 245);;
 }
 .w{
     position: relative;
     width: 1300px;
-    height: 1000px;
+    /* height: 1000px; */
     margin: 0 auto;
     box-shadow: 1px 2px 3px 4px #ccc;
 }
